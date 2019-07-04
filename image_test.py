@@ -252,7 +252,7 @@ def image_inference_withball(model_name, picure, label_color, output_name_color)
 
   #for draw ball 
   ADD_BALL = add_ball.Add_Ball(seg_image)
-  seg_image = ADD_BALL.add_check(1)
+  seg_image = ADD_BALL.add_check(1,seg_image)
   color_and_mask = cv2.addWeighted(resized_im, 0.4, seg_image, 0.6, 0.0) #overlayed image
   
   #chage to image form
