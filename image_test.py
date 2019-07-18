@@ -182,6 +182,7 @@ def video_inference_withball(model_name, picture, label_color, output_name):
   out = cv2.VideoWriter( output_name+'.mp4',fourcc, fps, (321,180)) #change by hand dimention
   
   first = True
+  vector = 2
   while (cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:
@@ -211,7 +212,7 @@ def video_inference_withball(model_name, picture, label_color, output_name):
         #print("right")
         vector = 3
       else :
-        vector = 2
+        pass
 
       #for draw ball 
       seg_image = ADD_BALL.add_check(vector,seg_image)
